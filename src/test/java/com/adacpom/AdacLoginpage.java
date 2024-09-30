@@ -22,7 +22,7 @@ public class AdacLoginpage extends AdactinHotelBase {
 	@FindBy(xpath = "//input[@id='login']")
 	private WebElement click;
 	
-	@FindBy(xpath = "//td[@class='welcome_menu']")
+	@FindBy(xpath = "//td[contains(text(),'Welcome to Adactin')]")
 	private WebElement text;
 
 	//Encapsulation -Below Getter and Setter method are used

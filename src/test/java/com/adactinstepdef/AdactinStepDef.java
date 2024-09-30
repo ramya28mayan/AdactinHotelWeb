@@ -1,6 +1,9 @@
 package com.adactinstepdef;
 
+import org.openqa.selenium.WebElement;
+
 import com.adacpom.AdacLoginpage;
+import com.adacpom.AdacSearchHotelpage;
 import com.adactinbase.AdactinHotelBase;
 
 import io.cucumber.java.en.Given;
@@ -10,6 +13,7 @@ import io.cucumber.java.en.When;
 public class AdactinStepDef extends AdactinHotelBase {
 	
 	AdacLoginpage adaclogin;
+	AdacSearchHotelpage adacsearch;
 
 	@Given("User should launch the browser")
 	public void user_should_launch_the_browser() {
@@ -31,20 +35,21 @@ public class AdactinStepDef extends AdactinHotelBase {
 
 	@Then("User should verify success message after login")
 	public void user_should_verify_success_message_after_login() {
-	   // login.getText();
+	   WebElement welcomtxt = adaclogin.getText();
+	   System.out.println(welcomtxt.getText());
 	}
 
 	@Then("User should logoff")
 	public void user_should_logoff() {
-//	  driver.close();
+driver.quit();
 	}
 	
 	@Then("User should search the hotel")
 	public void user_should_search_the_hotel() {
 		
-//		// Search for the hotel by selecting the values 
-//	    search = new SearchHotelPage();
-//	    search.searchhotel();
+	// Search for the hotel by selecting the values 
+	    adacsearch = new AdacSearchHotelpage();
+	    adacsearch.searchhotel();
 	}
 	  
 	    @Then("User should select the hotel")

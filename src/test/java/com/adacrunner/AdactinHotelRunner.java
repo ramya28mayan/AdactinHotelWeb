@@ -9,7 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		features = "src/test/resources",
-		glue = "com.adactinstepdef"
+		glue = "com.adactinstepdef",
+		plugin = {"pretty","html:target/adactinreport.html", "json:target/adacreport.json"}
+		
 		
 		)
 

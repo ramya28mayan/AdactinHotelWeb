@@ -11,3 +11,16 @@ Feature: Verifying the booking hotel functionality in Adactin Hotel
     Examples: 
       | username       | password|
       | IronmanCaptain | DLXY5Q  |
+
+      
+      @adactin_Search_Hotel
+Scenario Outline: Verify User is able Select Product after Login
+Given User should launch the browser
+When User should write "<username>" and "<password>"
+And User should click the login button
+Then User should verify success message after login
+And User should search the hotel
+
+Examples:
+|username|password|
+|IronmanCaptain|DLXY5Q|
