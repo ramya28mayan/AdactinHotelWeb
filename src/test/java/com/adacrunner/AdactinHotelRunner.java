@@ -10,6 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		
 		features = "src/test/resources",
 		glue = "com.adactinstepdef",
+		dryRun = false,
 		plugin = {"pretty","html:target/adactinreport.html", "json:target/adacreport.json"}
 		
 		
