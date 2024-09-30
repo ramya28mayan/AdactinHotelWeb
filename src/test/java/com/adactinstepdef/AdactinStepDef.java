@@ -64,7 +64,7 @@ driver.quit();
 	    public void user_should_select_the_hotel() {
 	    	
 	    	//Select the hotel 
-	    	
+	    	System.out.println("User select the hotel");
 	    	adacselect = new AdacSelectHotelPage();
 	    	adacselect.selecthotel();
 	    }
