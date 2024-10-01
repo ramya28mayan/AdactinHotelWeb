@@ -65,6 +65,25 @@ adaclogin = new AdacLoginpage();
 	    String wrgtext = adaclogin.getWrongtext().getText();
 	    System.out.println(wrgtext);
 	}
+	
+	
+	@When("User click on forgot password")
+	public void user_click_on_forgot_password() {
+		//Click(passwordlink);
+		adaclogin = new AdacLoginpage();
+		adaclogin.getPasswordlink().click();
+		WebElement enteremail = adaclogin.getEnteremail();
+		enteremail.sendKeys("ironmancaptainamerica28@gmail.com");
+		adaclogin.getEmsubmitbtn().click();
+	}
+
+	@Then("Print the error message")
+	public void print_the_error_message() {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    String text = adaclogin.getPassemail().getText();
+	    System.out.println(text);
+	}
+	
 	@Then("User should logoff")
 	public void user_should_logoff() {
 driver.quit();
