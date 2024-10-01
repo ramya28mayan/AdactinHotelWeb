@@ -1,5 +1,7 @@
 package com.adactinstepdef;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 
 import com.adacpom.AdacBookAHotelPage;
@@ -32,7 +34,7 @@ public class AdactinStepDef extends AdactinHotelBase {
 	  //driver.findElement(By.xpath("//input[@id='username']")).sendKeys("giugiugj");
 		adaclogin = new AdacLoginpage();
 		
-		EnterValue(adaclogin.getUserName(), username); 
+		EnterValue(adaclogin.getUsername(), username); 
 		EnterValue(adaclogin.getPassword(), password);
 	}
 
@@ -43,10 +45,26 @@ public class AdactinStepDef extends AdactinHotelBase {
 
 	@Then("User should verify success message after login")
 	public void user_should_verify_success_message_after_login() {
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 	   WebElement welcomtxt = adaclogin.getText();
 	   System.out.println(welcomtxt.getText());
 	}
 
+	@When("User should write correct {string} and wrong {string}")
+	public void user_should_write_correct_and_wrong(String username, String password) {
+adaclogin = new AdacLoginpage();
+		
+		EnterValue(adaclogin.getUsername(), username); 
+		EnterValue(adaclogin.getPassword(), password);
+	}
+
+	@SuppressWarnings("deprecation")
+	@Then("User should validate the error message")
+	public void user_should_validate_the_error_message() {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    String wrgtext = adaclogin.getWrongtext().getText();
+	    System.out.println(wrgtext);
+	}
 	@Then("User should logoff")
 	public void user_should_logoff() {
 driver.quit();

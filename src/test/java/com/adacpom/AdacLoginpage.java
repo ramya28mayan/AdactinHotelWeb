@@ -24,14 +24,21 @@ public class AdacLoginpage extends AdactinHotelBase {
 	
 	@FindBy(xpath = "//td[contains(text(),'Welcome to Adactin')]")
 	private WebElement text;
+	
+	@FindBy(xpath = "//b[contains(text(),'Invalid')]")
+	private WebElement wrongtext;
 
 	//Encapsulation -Below Getter and Setter method are used
 	//Get -To retrieve the value of above private field
 	//Set -To set the value of above private field
 
 
-	public WebElement getUserName() {
+	public WebElement getUsername() {
 		return username;
+	}
+
+	public WebElement getWrongtext() {
+		return wrongtext;
 	}
 
 	public WebElement getPassword() {
