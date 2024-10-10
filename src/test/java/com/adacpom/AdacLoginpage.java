@@ -61,8 +61,6 @@ public class AdacLoginpage extends AdactinHotelBase {
 		return enteremail;
 	}
 
-	
-
 	public WebElement getPasswordlink() {
 		return passwordlink;
 	}

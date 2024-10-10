@@ -11,7 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources",
 		glue = "com.adactinstepdef",
 		dryRun = false,
-		tags = "@adactin_Login_logout or @adactin_InvalidLogin_logout",
+		//tags = "@adactin_Login_logout or @adactin_InvalidLogin_logout",
+		//tags = "@adactin_Booking_Confirmation",
+		//tags = "@adactin_Booked_Iternary",
 		plugin = {"pretty","html:target/adactinreport.html", "json:target/adacreport.json"},
 		monochrome = true
 		

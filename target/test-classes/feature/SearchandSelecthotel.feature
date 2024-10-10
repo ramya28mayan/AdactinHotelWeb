@@ -10,7 +10,7 @@
 
     Examples: 
       | username       | password |
-      | IronmanCaptain | DLXY5Q   |
+      | IronmanCaptain | Y00899   |
 
   @adactin_Select_Hotel
   Scenario Outline: Verify User is able Select Product after Login
@@ -24,7 +24,7 @@
 
     Examples: 
       | username       | password |
-      | IronmanCaptain | DLXY5Q   |
+      | IronmanCaptain | Y00899   |
 
   @adactin_Book_Hotel
   Scenario Outline: Verify User is able Select Product after Login
@@ -39,7 +39,7 @@
 
     Examples: 
       | username       | password |
-      | IronmanCaptain | DLXY5Q   |
+      | IronmanCaptain | Y00899   |
       
       
       @adactin_Booking_Confirmation
@@ -56,7 +56,7 @@
 
     Examples: 
       | username       | password |
-      | IronmanCaptain | DLXY5Q   |
+      | IronmanCaptain | Y00899   |
       
 
 
